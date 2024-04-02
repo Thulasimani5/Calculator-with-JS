@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calc.css">
+    <style>
+        .button {
+            background-color:rgb(221, 97, 39);
+            border: 2px;
+            color: rgb(220, 235, 248);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 26px;
+            box-shadow: inset 5px 5px 12px whitesmoke;
+            box-shadow: 5px 5px 12px rgba(0,0,0,16); 
+        }
+        body {
+            background-color:rgb(188, 244, 250);
+        }
+        .calb{
+            align-items: center;
+            justify-content: center;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-columns: 120px 120px 70px ;
+            gap: 5px;
+        }
+        input{
+            margin-top: 20px;
+            margin-bottom: 0px;
+           display: grid;
+           grid-template-columns: 240px;
+           width: 280px;
+           height:30px;
+           text-align: end;
+           border-radius: 35px;
+           font-size: 30px;
+           padding: 20px;
+        }
+        .ca{
+             display: grid;
+             grid-template-columns: auto auto auto auto ;
+             justify-content: center;
+             grid-template-columns: 75px 75px 75px 75px;
+             gap: 5px;
+             padding: 1px;
+        }
+        .cen{
+            margin: auto;
+            box-shadow: inset 5px 5px 12px whitesmoke;
+            box-shadow: 5px 5px 12px rgba(0,0,0,16); 
+            width: fit-content;
+            padding: 8px;
+            background-color:rgb(117, 185, 204);
+            border-radius: 35px;
+            
+        }
+
+    </style>
+</head>
+<body>
+   <h1>SIMPLE CALCULATOR</h1><br>
+   <div class="cen">
+   <center><input placeholder='0' type="text" id="op"><br></center>
+   <div class="calb" id="calb">
+    <button onclick="cl()" width="10cm" class="button">AC</button>
+        <button class="button" onclick="del()">DEL</button>
+        <button onclick="func('%')" >%</button>
+    </div>
+        <div class="ca" >
+        <button onclick="func('7')">7</button>
+        <button onclick="func('8')" >8</button>
+        <button onclick="func('9')">9</button>
+        <button onclick="func('/')" >/</button>
+        <button onclick="func('4')">4</button>
+        <button onclick="func('5')">5</button>
+        <button onclick="func('6')">6</button>
+        <button onclick="func('*')">*</button>
+        <button onclick="func('1')">1</button>
+        <button onclick="func('2')">2</button>
+        <button onclick="func('3')">3</button>
+        <button onclick="func('-')" >-</button>
+        <button onclick="func('0')">0</button>
+        <button onclick="func('.')">.</button>
+        <button onclick="equal()" class="eq">=</button>
+        <button onclick="func('+')">+</button>
+    </div>
+</div>
+</body>
+<script>
+    let ops = document.getElementById("op");
+    document.getElementById("calb");
+    function func(num)
+    {
+        op.value += num;
+    }
+    function equal()
+    {
+        try
+        {
+            op.value=eval(op.value);
+        }
+        catch(err){
+            alert("ERROR");
+        }
+    }
+    function cl()
+    {
+        document.getElementById("calb");
+        ops.value = "";
+    }
+    function del()
+    {
+        op.value = op.value.slice(0,-1);
+    }
+    
+
+</script>
+</html>

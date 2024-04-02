@@ -1,0 +1,36 @@
+h1 {
+    color: brown;
+    text-align: center;
+  }
+.calb
+{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: insert 5px 5px 12px blanchedalmond
+}
+button {
+    size: 10cm;
+    background-color:rgb(12, 36, 47);
+    color: white;
+    border: 10px solid #95de0d;
+    padding: 22px 32px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 30px;
+    transition-duration: 0.4s;
+    box-shadow: inset 5px 5px 12px whitesmoke;
+    box-shadow: 5px 5px 12px silver; 
+    border: 1px rgb(10, 94, 127);
+    text-decoration: none;
+    display: inline-block;
+  }
+  button:active {
+    background-color: #dbe0e97b;
+    box-shadow: 0 5px #0c0f0f;
+    transform: translateY(4px);
+  }
+  t1
+  {
+    font-size: 20px;
+  }
